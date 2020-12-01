@@ -11,7 +11,7 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 public class CadastroAutomovelDTO {
 
-    @NotNull(message = "Modelo nao pode ser nulo")
+    @NotNull(message = "modeloId nao pode ser nulo")
     private Integer modeloId;
 
     @NotNull(message = "Valor nao pode ser nulo")

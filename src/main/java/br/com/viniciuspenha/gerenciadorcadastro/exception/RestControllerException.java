@@ -27,10 +27,10 @@ public class RestControllerException {
         return this.getApiError("Um erro inesperado aconteceu", HttpStatus.INTERNAL_SERVER_ERROR, req);
     }
 
-    @ExceptionHandler(ModeloNotFoundException.class)
+    @ExceptionHandler({AutomovelNotFoundException.class, ModeloNotFoundException.class})
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    public ApiError handleModeloNotFoundException(HttpServletRequest req, Throwable ex) {
-        log.error("RestControllerException.handleModeloNotFoundException - " + ex.getMessage());
+    public ApiError handleNotFoundException(HttpServletRequest req, Throwable ex) {
+        log.error("RestControllerException.handleNotFoundException - " + ex.getMessage());
         return this.getApiError(ex.getMessage(), HttpStatus.NOT_FOUND, req);
     }
 }

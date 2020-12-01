@@ -1,6 +1,5 @@
 package br.com.viniciuspenha.gerenciadorcadastro.model.dto;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
 import javax.validation.constraints.Digits;

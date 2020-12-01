@@ -18,6 +18,7 @@ public class AutomovelMapper {
 
     public ResponseAutomovelDTO toResponseAutomovelDTO(Automovel automovel) {
         return new ResponseAutomovelDTO(
+                automovel.getId(),
                 automovel.getModelo().getMarca().getNome(),
                 automovel.getModelo().getNome(),
                 automovel.getValor(),

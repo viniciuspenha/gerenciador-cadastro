@@ -10,6 +10,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public class ResponseAutomovelDTO {
 
+    private Long id;
     private String marca;
     private String modelo;
     private BigDecimal valor;

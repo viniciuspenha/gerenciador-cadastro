@@ -1,5 +1,6 @@
 package br.com.viniciuspenha.gerenciadorcadastro.service;
 
+import br.com.viniciuspenha.gerenciadorcadastro.exception.AutomovelNotFoundException;
 import br.com.viniciuspenha.gerenciadorcadastro.exception.ModeloNotFoundException;
 import br.com.viniciuspenha.gerenciadorcadastro.model.dto.CadastroAutomovelDTO;
 import br.com.viniciuspenha.gerenciadorcadastro.model.entity.Automovel;
@@ -39,6 +40,12 @@ public class CadastroService {
     }
 
     public List<Automovel> getAutomoveis() {
+        log.info("CadastroService.getAutomoveis");
         return automovelRepository.findAll();
+    }
+
+    public Automovel getAutomovelById(Long id) throws AutomovelNotFoundException {
+        log.info("CadastroService.getAutomovelById - id {}", id);
+        return automovelRepository.findById(id).orElseThrow(AutomovelNotFoundException::new);
     }
 }

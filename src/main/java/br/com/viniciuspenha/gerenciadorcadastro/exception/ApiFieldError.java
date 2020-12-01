@@ -2,19 +2,15 @@ package br.com.viniciuspenha.gerenciadorcadastro.exception;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import lombok.*;
-
-import java.util.List;
+import lombok.Builder;
+import lombok.Data;
 
 @Data
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class ApiError {
+public class ApiFieldError {
 
-    private int status;
-    private String error;
+    private String campo;
     private String mensagem;
-    private String path;
-    private List<ApiFieldError> fieldErrors;
 }

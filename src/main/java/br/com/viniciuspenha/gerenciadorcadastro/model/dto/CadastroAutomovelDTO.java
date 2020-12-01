@@ -11,10 +11,10 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 public class CadastroAutomovelDTO {
 
-    @NotNull
+    @NotNull(message = "Modelo nao pode ser nulo")
     private Integer modeloId;
 
-    @NotNull
-    @Digits(integer = 10, fraction = 2)
+    @NotNull(message = "Valor nao pode ser nulo")
+    @Digits(integer = 10, fraction = 2, message = "Valor inválido. Seguir o padrão <10 dígitos>.<2 dígitos>")
     private BigDecimal valor;
 }

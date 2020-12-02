@@ -12,4 +12,4 @@
 |  '--'  ||  |____    |  `----. /  _____  \  |  '--'  | /  _____  \  .----)   |       |  |     |  |\  \----.|  `--'  |
 |_______/ |_______|    \______|/__/     \__\ |_______/ /__/     \__\ |_______/        |__|     | _| `._____| \______/
 
- :: Gerenciador de Automoveis ::                (Vinicius Penha)
+ :: Gerenciador de Cadastro de Automoveis ::                (Vinicius Penha)

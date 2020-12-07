@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: gerenciador-cadastro
+
+  datasource:
+    url: jdbc:h2:mem:automoveldb
+    username: root
+    password: vini
+    driver-class-name: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+  h2.console.enabled: true
+
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://localhost:8088/user
+
+token:
+  url: http://localhost:8088/oauth/token
+  authorization: Basic dGVzdGU6cGFzcw==
+  username: vini
+  password: pass
+  scope: web
+  grant_type: password
